@@ -29,7 +29,7 @@ export default function Login(){
 
     function authBtn() {
         isSubmiting(true)
-        fetch('http://127.0.0.1:5000/get-authentication-info',{
+        fetch(`${process.env.REACT_APP_URL}/get-authentication-info`,{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(form)

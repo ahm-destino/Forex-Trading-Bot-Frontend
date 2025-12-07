@@ -24,7 +24,7 @@ export default function Dashboard() {
 
 // This line of code is to fetch the users account bvalance and details from the backend server
 useEffect(()=>{
-    fetch('http://127.0.0.1:5000/get-users-trading-details')
+    fetch(`${process.env.REACT_APP_URL}/get-users-trading-details`)
     .then(response =>  response.json())
     .then(data => {
         
@@ -60,7 +60,7 @@ useEffect(()=>{
 
 function takeTrade() {
     
-    fetch('http://127.0.0.1:5000/fetch-indicators-and-predict-trade')
+    fetch(`${process.env.REACT_APP_URL}/fetch-indicators-and-predict-trade`)
     .then(response => response.json())
     .then(data =>{
         alert(data.comment)

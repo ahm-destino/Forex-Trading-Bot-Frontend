@@ -11,7 +11,7 @@ export default function AthenticationLayout() {
 
         alert('Loading... Please wait until you recieve a successfully Initialized message before you login.');
 
-        fetch('http://127.0.0.1:5000/initialize-mt5',{
+        fetch(`${process.env.REACT_APP_URL}/initialize-mt5`,{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify('Initialize')
