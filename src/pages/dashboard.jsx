@@ -24,7 +24,7 @@ export default function Dashboard() {
 
 // This line of code is to fetch the users account bvalance and details from the backend server
 useEffect(()=>{
-    fetch(`${process.env.REACT_APP_URL}/get-users-trading-details`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/get-users-trading-details`)
     .then(response =>  response.json())
     .then(data => {
         

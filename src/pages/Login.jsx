@@ -29,7 +29,7 @@ export default function Login(){
 
     function authBtn() {
         isSubmiting(true)
-        fetch(`${process.env.REACT_APP_URL}/get-authentication-info`,{
+        fetch(`${import.meta.VITE_BACKEND_URL}/get-authentication-info`,{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(form)
